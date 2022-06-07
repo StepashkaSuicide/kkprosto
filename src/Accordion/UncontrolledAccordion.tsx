@@ -12,13 +12,8 @@ function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
     const [collapsed, setCollapsed] = useState(false)
 
     const handler = () => {
-        if (collapsed) {
-            setCollapsed(false)
-        } else {
-            return setCollapsed(true)
-        }
+        setCollapsed(!collapsed)
     }
-
     return (
         <div>
             <AccordionTitle title={props.titleValue}/>

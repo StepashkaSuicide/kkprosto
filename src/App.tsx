@@ -1,6 +1,7 @@
 import React from 'react';
 import OnOff from "./OnOff/OnOff";
 import UncontrolledAccordion from "./Accordion/UncontrolledAccordion";
+import {Rating} from "./Accordion/Rating";
 
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
             <UncontrolledAccordion titleValue={'Menu'} />
             <UncontrolledAccordion titleValue={'Users'}/>
             Article 2
-            {/*<Rating value={0}/>*/}
+
             {/*<Rating value={1}/>*/}
             {/*<Rating value={2}/>*/}
             {/*<Rating value={3}/>*/}
@@ -17,6 +18,7 @@ function App() {
             {/*<Rating value={5}/>*/}
 
             <OnOff/>
+            <Rating  />
         </div>
     );
 }
