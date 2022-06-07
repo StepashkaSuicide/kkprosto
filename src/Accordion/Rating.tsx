@@ -28,12 +28,12 @@ export function Rating() {
 type StarPropsType = {
     selected: boolean
 }
+const spanHandler = () => {
 
+}
 function Star(props: StarPropsType) {
 
-    const spanHandler = () => {
 
-    }
 
     // if (props.selected) {
     //     return <span><b>star</b> </span>
