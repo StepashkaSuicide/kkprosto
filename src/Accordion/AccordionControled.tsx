@@ -10,7 +10,9 @@ type AccordionPropsType = {
 export function AccordionControlled(props: AccordionPropsType) {
     return (
         <div>
-            <AccordionTitle title={props.titleValue}  accordionClick={props.accordionClick} collapsed={!props.collapsed}/>
+            <AccordionTitle title={props.titleValue}
+                            accordionClick={props.accordionClick}
+                            collapsed={!props.collapsed}/>
             {!props.collapsed && <AccordionBody/>}
         </div>
     )
