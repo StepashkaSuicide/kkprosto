@@ -6,7 +6,7 @@ type UncontrolledAccordionPropsType = {
     // collapsed: boolean
 }
 
-function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
+export function UncontrolledAccordion(props: UncontrolledAccordionPropsType) {
 
 
     const [collapsed, setCollapsed] = useState(false)
@@ -40,5 +40,3 @@ function AccordionBody() {
         <li>3</li>
     </ul>
 }
-
-export default UncontrolledAccordion
