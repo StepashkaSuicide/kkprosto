@@ -1,10 +1,17 @@
 import React from "react";
 
 
+type ItemType = {
+    title: string
+    value: any
+}
+
 type AccordionPropsType = {
     titleValue: string
     collapsed: boolean
-    accordionClick: (collapsed: boolean)=> void
+    accordionClick: ()=> void
+    items: ItemType[]
+    onClick: (value: any)=> void
 }
 
 export function AccordionControlled(props: AccordionPropsType) {
@@ -13,7 +20,7 @@ export function AccordionControlled(props: AccordionPropsType) {
             <AccordionTitle title={props.titleValue}
                             accordionClick={props.accordionClick}
                             collapsed={!props.collapsed}/>
-            {!props.collapsed && <AccordionBody/>}
+            {!props.collapsed && <AccordionBody onClick={props.onClick} items={props.items}/>}
         </div>
     )
 }
@@ -29,11 +36,13 @@ function AccordionTitle(props: AccordionTitlePropsType) {
     return <h3 onClick={()=> {props.accordionClick(props.collapsed)}}>--{props.title}--</h3>
 
 }
+type AccordionBodyPropsType = {
+    items: ItemType[]
+    onClick: (value: any)=> void
+}
 
-function AccordionBody() {
+function AccordionBody(props: AccordionBodyPropsType) {
     return <ul>
-        <li>1 </li>
-        <li>2</li>
-        <li>3</li>
+        {props.items.map((i, index)=> <li onClick={()=> {props.onClick(i.value)}} key={index}>{i.title}</li>)}
     </ul>
 }
