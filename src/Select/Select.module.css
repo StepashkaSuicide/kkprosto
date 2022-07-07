@@ -1,0 +1,22 @@
+
+
+/*что бы было поле для нажатия*/
+.select .main {
+    border: 1px solid black;
+    display: inline-block;
+    min-height: 20px;
+    min-width: 40px;
+
+}
+/*каждый итем*/
+.items {
+    position: absolute;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+/*выбранный итем*/
+.item.selected {
+    background-color: blue;
+    color: white;
+}
