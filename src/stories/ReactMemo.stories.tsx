@@ -26,7 +26,7 @@ export const Example1 = ()=> {
         let newUser = [...users, 'Sveta' + new Date().getTime()]
         setUsers(newUser)
     }
-
+//useMemo
 
 return <>
         <button onClick={()=> setCounter((counter+ 1))}>+</button>
